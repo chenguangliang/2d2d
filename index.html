@@ -1,0 +1,71 @@
+<!-- saved from url=(0045)https://2016gary.github.io/2DCodeRecognition/ -->
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>二维码识别</title>
+    <link rel="stylesheet" href="2D/2D.css">
+    <script type="text/javascript" src="2D/llqrcode.js"></script>
+    <script type="text/javascript" src="2D/webqr.js"></script>
+
+</head>
+<body>
+<div id="main">
+    <div id="header">
+        <div style="position:relative;top:+20px;left:0px;">
+            <g:plusone size="medium"></g:plusone>
+        </div>
+    </div>
+
+    <div id="mainbody" style="display: inline;">
+        <table class="tsel" border="0" width="100%">
+            <tbody>
+            <tr>
+                <td valign="top" align="center" width="50%">
+                    <table class="tsel" border="0">
+                        <tbody>
+                        <tr>
+                            <td><img class="selector" id="webcamimg" src="2D/vid.png" onclick="setwebcam()" align="left"
+                                     style="opacity: 0.2;"></td>
+                            <td><img class="selector" id="qrimg" src="2D/cam.png" onclick="setimg()" align="right"
+                                     style="opacity: 1;"></td>
+                        </tr>
+                        <tr>
+                            <td colspan="2" align="center">
+                                <div id="outdiv">
+                                    <div id="qrfile">
+                                        <camera id="out-canvas" width="320" height="240"></camera>
+                                        <div id="imghelp">拖拽一个二维码<br>或选择一个文件
+                                            <input type="file"  onchange="handleFiles(this.files)">
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="3" align="center">
+                    <img src="2D/down.png">
+                </td>
+            </tr>
+            <tr>
+                <td colspan="3" align="center">
+                    <div id="result"><br><b>wxp://f2f0MBpE1xk-ao8cJJDE1ElBZ_NeTSzILpQE</b><br><br></div>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+
+        <canvas id="qr-canvas" width="800" height="600" style="width: 800px; height: 600px;"></canvas>
+
+        <script type="text/javascript">load();</script>
+
+    </div>
+</div>
+<div id="cli_dialog_div"></div>
+</body>
+</html>
